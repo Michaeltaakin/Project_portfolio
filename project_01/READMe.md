@@ -116,8 +116,7 @@ Everything was automated through Terraform, which makes it easy to destroy and r
 
 ## Conclusion
 
-Through this project, I created a production-style AWS network architecture using Terraform and strengthened my skills in VPC design, subnet layout, routing configuration, security groups, and automated EC2 provisioning. It also allowed me to apply best practices for building, secure and scalable cloud environments.
-
+In this project, I designed a production-ready AWS network architecture using Terraform, which enhanced my skills in VPC design, subnet planning, routing configuration, security groups, and automated EC2 provisioning. It also gave me hands-on experience applying best practices for building secure, scalable, and efficient cloud environments.
 
 
 
