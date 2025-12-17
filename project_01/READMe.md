@@ -101,13 +101,13 @@ These outputs make validation straightforward after running terraform apply.
 # 10. Final verification from my AWS concole
 By the end of the project, I had:
 
-A fully custom VPC,
+Fully custom VPC,
 Two public subnets in different AZs,
 One private subnet,
-An internet gateway and routing,
-A security group,
+internet gateway and routing,
+security group,
 Public EC2 instances,,
-A private EC2 instance,
+private EC2 instance,
 Useful Terraform outputs.
 
 Everything was automated through Terraform, which makes it easy to destroy and rebuild anytime with a single command.
