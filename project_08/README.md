@@ -17,16 +17,15 @@ Using Ansible, I can:
 
 # Steps I Took
 
-# Step 1 -- Created the EC2 Instance
-I launched an Amazon Linux  EC2 instance from the AWS Console.
-I made sure I could connect to it using my SSH key.
-This instance acted as the target server for patching.
+# Step 1 -- Created EC2 Instances
+
+I launched an Amazon Linux  EC2 instances from the AWS Console, I made sure I could connect to it using my SSH key. This instance acted as the target server for patching.
 
 ![alt text](<screenshots/Screenshot 2025-11-09 151913.png>)
 
  
 # Step 2 -- Created the Project Structure
-I created a clean folder structure for the project:
+I created a clean ansible folder structure for this project:
 
  ![alt text](<screenshots/Screenshot 2025-11-10 171908.png>)
 
