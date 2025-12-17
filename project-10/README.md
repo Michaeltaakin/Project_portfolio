@@ -21,7 +21,7 @@ Project Objectives
 1. Project Approach
 I structured my Terraform project into four main files:
 
-![alt text](<Screenshot 2025-11-19 193715.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 193715.png>)
 
 # main.tf
 Contains the resources that Terraform creates:
@@ -76,14 +76,14 @@ To allow EC2 to send logs and metrics to CloudWatch, I created a policy that per
 •	Putting log events
 •	Publishing custom metrics
 
-![alt text](<Screenshot 2025-11-20 125950.png>)
+![alt text](<screenshots/Screenshot 2025-11-20 125950.png>)
 
 This enables EC2 to report monitoring data to CloudWatch.
 
 Policy Attachments
 Both the S3 and CloudWatch policies were attached to the IAM role using Terraform, giving the role all necessary permissions.
 
-![alt text](<Screenshot 2025-11-20 125501.png>)
+![alt text](<screenshots/Screenshot 2025-11-20 125501.png>)
 
 Instance Profile
 I created an instance profile for the IAM role.
@@ -100,9 +100,9 @@ These outputs simplify debugging, verification, and integration with other resou
 
 After I ran and deployed all resources with Terraform, I logged into the AWS Management Console and manually verified each component to ensure everything was created correctly and aligned with the project design.
 
-![alt text](<Screenshot 2025-11-19 194518.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 194518.png>)
 
-![alt text](<Screenshot 2025-11-19 194537.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 194537.png>)
 
 ## Step 4: Validation in AWS Console
 
@@ -116,17 +116,17 @@ After running terraform apply, I manually confirmed the deployment:
 
 This confirmed all resources were deployed correctly, and the EC2 instance could securely access AWS services.
 
-![alt text](<Screenshot 2025-11-19 194956.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 194956.png>)
 
-![alt text](<Screenshot 2025-11-19 195124.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 195124.png>)
 
-![alt text](<Screenshot 2025-11-19 195317.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 195317.png>)
 
-![alt text](<Screenshot 2025-11-19 195409.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 195409.png>)
 
-![alt text](<Screenshot 2025-11-19 195838.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 195838.png>)
 
-![alt text](<Screenshot 2025-11-19 200130.png>)
+![alt text](<screenshots/Screenshot 2025-11-19 200130.png>)
 
 
 ## Step 5: Final Summary
