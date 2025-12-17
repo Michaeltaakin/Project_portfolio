@@ -26,7 +26,7 @@ I created a folder structure to organize my Terraform and Lambda code:
 # main.tf
 This file builds all AWS resources, including IAM roles and policies, Lambda functions for starting and stopping EC2, EventBridge schedules, and the permissions needed for EventBridge to trigger Lambda. It is the core infrastructure file for this automation.
 
-# ariables.tf
+# variables.tf
 This file defines the input variables needed for the project. It includes the AWS region (in my case, us-east-2) and the EC2 instance ID that Lambda should control. I pass the instance ID at runtime when applying the Terraform plan.
 
 # outputs.tf
