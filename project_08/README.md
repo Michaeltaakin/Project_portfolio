@@ -22,13 +22,13 @@ I launched an Amazon Linux  EC2 instance from the AWS Console.
 I made sure I could connect to it using my SSH key.
 This instance acted as the target server for patching.
 
-![alt text](<Screenshot 2025-11-09 151913.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 151913.png>)
 
  
 # Step 2 -- Created the Project Structure
 I created a clean folder structure for the project:
 
- ![alt text](<Screenshot 2025-11-10 171908.png>)
+ ![alt text](<screenshots/Screenshot 2025-11-10 171908.png>)
 
 
 Here’s what each file does:
@@ -36,13 +36,13 @@ Here’s what each file does:
 •	playbook.yml -- the main Ansible playbook that performs the patching.
 •	ansible.cfg -- configuration file that tells Ansible where to find the inventory and other settings.
 
-![alt text](<Screenshot 2025-11-10 172356.png>)
+![alt text](<screenshots/Screenshot 2025-11-10 172356.png>)
 
 
 # Step 3 -- I Defined the EC2 Instance in Inventory File
 I added my EC2 instance’s public IP address to inventory.ini:
 
-![alt text](<Screenshot 2025-11-10 172356-1.png>)
+![alt text](<screenshots/Screenshot 2025-11-10 172356-1.png>)
 
  
 This tells Ansible to Connect to this EC2 instances using this username and key.
@@ -50,7 +50,7 @@ This tells Ansible to Connect to this EC2 instances using this username and key.
 # Step 4 -- Wrote the Patching Playbook
 In the playbook.yml file, I created  Ansible automation steps:
 
-![alt text](<Screenshot 2025-11-10 172905.png>)
+![alt text](<screenshots/Screenshot 2025-11-10 172905.png>)
 
  
 This playbook will  updates every package to the latest version and It will reboots the server automatically if needed (for example, after a kernel update).
@@ -62,7 +62,7 @@ Here’s the command I ran:
 After I ran the command, Ansible connected to my EC2 instance using the private key I had set up and I got this response.
 
 
-![alt text](<Screenshot 2025-11-09 150939.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 150939.png>)
 
 
 Here’s what each part means:
@@ -83,7 +83,7 @@ I executed the playbook using the ansible playbook command:
 
 ansible-playbook playbook.yml
 
-![alt text](<Screenshot 2025-11-09 151501.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 151501.png>)
 
 
 Which means:
@@ -97,9 +97,9 @@ I went to the EC2 Console, opened Instances, and clicked on the Monitoring tab.
 There, I checked the CPU Utilization graph and noticed a brief CPU spike during the reboot. This confirmed that the patching and restart actually happened.
 I also checked the Status Checks, and both were marked as passed after the reboot showing that my instance was healthy and back online after the updates.
 
-![alt text](<Screenshot 2025-11-09 153450.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 153450.png>)
 
-![alt text](<Screenshot 2025-11-09 151913-1.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 151913-1.png>)
 
 
 # Step 8 -- Confirming the Patching Was Successful
@@ -109,7 +109,7 @@ Amazon Linux 2023.8.20250818
 Kernel 6.1.147-172.266.amzn2023.x86_64 on an x86_64
 ip-172-31-35-222 login:
 
-![alt text](<Screenshot 2025-11-09 152634.png>)
+![alt text](<screenshots/Screenshot 2025-11-09 152634.png>)
 
  
 This message confirmed that my EC2 instance had rebooted properly and was running the latest version of Amazon Linux 2023.
